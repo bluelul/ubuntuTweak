@@ -13,12 +13,13 @@ sudo resize2fs /dev/loop0
 sudo apt-get install undistract-me
 ```
 - close all terminals
+- restart ubuntu
 - open a terminal and test by running this command and switch to another window
 ```bash
 sleep 11
 ```
 
-## Disable Linux time affects Window time
+## Disable Linux time affecting Window time
 ```bash
 timedatectl set-local-rtc 1 --adjust-system-clock
 ```
