@@ -14,7 +14,7 @@ sudo apt-get install undistract-me
 ```
 - close all terminals
 - restart ubuntu
-- open a terminal and test by running this command and switch to another window
+- open a terminal and test by running this command then switching to another window
 ```bash
 sleep 11
 ```
