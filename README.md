@@ -1,5 +1,5 @@
 # ubuntuTweak
-## Author: `bluelul.com`
+### Author: `bluelul.com`
 
 ## Increase Wubi Disk
 Run command directly on Wubi Linux OS
