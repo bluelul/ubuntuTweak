@@ -40,3 +40,9 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 ```
 Close all terminals and reopen
+
+## Detailed list file command
+```bash
+echo lah=\'ls -lah\' >> ~\.bashrc
+```
+Open new terminal and type `lah`
