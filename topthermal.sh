@@ -23,7 +23,9 @@ do
 			echo -n `cat ${myOrgPath}/$eachDir/type` >> thermal.csv;
 			echo -n "," >> thermal.csv;
 		else
-			cat ${myOrgPath}/$eachDir/temp
+			echo -n `cat ${myOrgPath}/$eachDir/type`;
+			echo -n " | ";
+			echo `cat ${myOrgPath}/$eachDir/temp`;
 		fi	
 	else
 		cat ${myOrgPath}/$eachDir/type
