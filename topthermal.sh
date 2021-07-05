@@ -1,9 +1,9 @@
 #!/bin/bash
 
+echo 
 echo Topthermal v2 - show and log temperature values \(oC\) of device
 echo Author: bluelul.com - lttung1197
 echo Reading...
-sleep 1
 
 myOrgPath='/sys/class/thermal';
 
@@ -15,22 +15,33 @@ myDirs=();
 myNames=();
 for eachDir in $myFiles
 do
-        if [[ -r ${myOrgPath}/$eachDir/type && -r ${myOrgPath}/$eachDir/temp ]]; then
-		myDirs+=($eachDir);
-		myNames+=(`cat ${myOrgPath}/$eachDir/type`);
+	if `cat ${myOrgPath}/$eachDir/type &> /dev/null`; then
+		if `cat ${myOrgPath}/$eachDir/temp &> /dev/null`; then
+			myDirs+=($eachDir);
+			myNames+=(`cat ${myOrgPath}/$eachDir/type`);
 
-		echo -n `cat ${myOrgPath}/$eachDir/type` >> thermal.csv;
-		echo -n "," >> thermal.csv;
+			echo -n `cat ${myOrgPath}/$eachDir/type` >> thermal.csv;
+			echo -n "," >> thermal.csv;
+		else
+			cat ${myOrgPath}/$eachDir/temp
+		fi	
+	else
+		cat ${myOrgPath}/$eachDir/type
 	fi
 done
 
 echo "" >> thermal.csv;
 
+sleep 1
+
+start=`date +%s`;
+
 while true
 do
 	clear;
 	
-	echo -n `date +%s` >> thermal.csv;
+	now=`date +%s`;
+	echo -n $((now - start)) >> thermal.csv;
         echo -n "," >> thermal.csv;
 
 	for i in $(seq ${#myDirs[@]})
@@ -46,7 +57,8 @@ do
 
 	echo "" >> thermal.csv;
 	
+	echo;
+	echo -n "Up time: ";
+	echo `date -d@$((now - start)) -u +%H:%M:%S`;
         sleep 1;
-	clear;
-        echo "-----------------------------------------";
 done
