@@ -46,3 +46,8 @@ Close all terminals and reopen
 echo alias lah=\'ls -lah\' >> ~/.bashrc
 ```
 Open new terminal and type `lah`
+
+## Multiscreen terminal
+```bash
+sudo apt install terminator
+```
