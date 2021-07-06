@@ -56,3 +56,5 @@ sudo apt install terminator
 ```bash
 sudo ubuntu-drivers autoinstall
 ```
+
+![image info](./asset/SysMonBar.JPG)
