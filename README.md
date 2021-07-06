@@ -51,3 +51,8 @@ Open new terminal and type `lah`
 ```bash
 sudo apt install terminator
 ```
+
+## Install Nvidia Driver
+```bash
+sudo ubuntu-drivers autoinstall
+```
