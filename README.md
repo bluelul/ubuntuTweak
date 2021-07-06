@@ -43,6 +43,6 @@ Close all terminals and reopen
 
 ## Detailed list file command
 ```bash
-echo lah=\'ls -lah\' >> ~/.bashrc
+echo alias lah=\'ls -lah\' >> ~/.bashrc
 ```
 Open new terminal and type `lah`
