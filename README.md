@@ -1,9 +1,8 @@
-# ubuntuTweak
+# Ubuntu Tweak
+Tweaks that every Ubuntu/Linux user needs  
+Better experience of using Ubuntu  
+
 ### Author: `bluelul.com`
-
-
-<p align="center"><img src="/asset/SysMonBar.JPG"/></p>
-  
   
 ## Increase Wubi Disk
 Run command directly on Wubi Linux OS
@@ -59,4 +58,36 @@ sudo apt install terminator
 ## Install Nvidia Driver
 ```bash
 sudo ubuntu-drivers autoinstall
+```
+Check driver has installed successfully by command `nvidia-smi`
+
+## System Monitor live on Top Bar
+<p align="center"><img src="/asset/SysMonBar.jpg"/></p>
+  
+*Fully install graphic driver first*
+
+### Install system monitor with graph 
+Only for GNOME (Ubuntu 18.04+), may lag in Unity (Ubuntu 16.04)
+- Run this command
+```bash
+sudo apt install gnome-tweaks gnome-shell-extension-system-monitor
+```
+- Log out and log in
+- Open `GNOME Tweak Tool` --> `Extension` --> Turn on `System-monitor`
+
+<br/>
+
+### Install system monitor with number
+- Run this command
+```bash
+sudo apt install indicator-multiload
+```
+- Run `System Load Indicator` --> Click the section appear in top bar --> Choose `Preferences` --> `Indicator Items...` 
+- **Option 1:** Paste the below text to the first item in list if you want to use along with `System-monitor` extension
+```
+Mem $(size(mem.user))  Net $(speed(net.down)) | $(speed(net.up))
+```
+- **Option 2:** Paste the below text to the first item in list if you only want to show number, not graph from `System-monitor` extension
+```
+Net $(speed(net.down)) | $(speed(net.up))   CPU $(percent(cpu.inuse))   Mem $(size(mem.user))
 ```
