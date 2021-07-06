@@ -1,6 +1,10 @@
 # ubuntuTweak
 ### Author: `bluelul.com`
 
+
+<p align="center"><img src="/asset/SysMonBar.JPG"/></p>
+  
+  
 ## Increase Wubi Disk
 Run command directly on Wubi Linux OS
 ```bash
@@ -56,5 +60,3 @@ sudo apt install terminator
 ```bash
 sudo ubuntu-drivers autoinstall
 ```
-
-![image info](./asset/SysMonBar.JPG)
