@@ -11,27 +11,7 @@ sudo dd if=/dev/zero bs=1MiB of=/host/ubuntu/disks/root.disk conv=notrunc oflag=
 sudo losetup -c /dev/loop0
 sudo resize2fs /dev/loop0
 ```
-## Notify after long command finished in terminal
-- install undistract-me
-```bash
-sudo apt-get install undistract-me
-```
-- open ~/.bashrc file by gedit with sudo
-```bash
-sudo gedit ~/.bashrc
-```
-- add these lines to ~/.bashrc file
-```bash
-if ! [ -z "$BASH_VERSION" -o -z "$PS1" -o -n "$last_command_started_cache" ]; then
-  . /usr/share/undistract-me/long-running.bash
-  notify_when_long_running_commands_finish_install
-fi
-```
-- close all terminals
-- open a terminal and test by running this command then switching to another window
-```bash
-sleep 11
-```
+Restart computer to fully update
 
 ## Disable Linux time affecting Window time
 ```bash
@@ -60,6 +40,28 @@ sudo apt install terminator
 sudo ubuntu-drivers autoinstall
 ```
 Check driver has installed successfully by command `nvidia-smi`
+
+## Notify after long command finished in terminal
+- install undistract-me
+```bash
+sudo apt-get install undistract-me
+```
+- open ~/.bashrc file by gedit with sudo
+```bash
+sudo gedit ~/.bashrc
+```
+- add these lines to ~/.bashrc file
+```bash
+if ! [ -z "$BASH_VERSION" -o -z "$PS1" -o -n "$last_command_started_cache" ]; then
+  . /usr/share/undistract-me/long-running.bash
+  notify_when_long_running_commands_finish_install
+fi
+```
+- close all terminals
+- open a terminal and test by running this command then switching to another window
+```bash
+sleep 11
+```
 
 ## System Monitor live on Top Bar
 <p align="center"><img src="/asset/SysMonBar.jpg"/></p>
@@ -91,3 +93,61 @@ Mem $(size(mem.user))  Net $(speed(net.down)) | $(speed(net.up))
 ```
 Net $(speed(net.down)) | $(speed(net.up))   CPU $(percent(cpu.inuse))   Mem $(size(mem.user))
 ```
+
+
+## Colorize headline of Root User Bash Prompt Terminal
+### 1. Open user related `.bashrc` file
+- Root user:
+```bash
+sudo gedit /root/.bashrc
+```
+- Normal user:
+```bash
+gedit ~/.bashrc
+```
+### 2. Add one of these theme template at the end of ~/.bashrc file
+- Ubuntu default theme  
+```bash
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+```
+- Root theme
+```bash
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+```
+- Docker theme
+```bash
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;44m\] \u@\h \[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+```
+Then open new terminal to apply changes
+
+### 3. [Optional] Customize theme
+<!-- <details>
+  <summary>Expand</summary> -->
+  - Parts of a theme:  
+    PS1='`${debian_chroot:+($debian_chroot)}` `\[\033[01;44m\]` ` \u@\h ` `\[\033[00m\]` `:` `\[\033[01;34m\]` `\w` `\[\033[00m\]` `\$ `'  
+  - One color code affects the next text code
+  - Special text code:
+  ```
+    \u : user
+    \h : host
+    \w : short path
+    \W : full path
+    \T : time in hh:mm:ss
+    \@ : time in hh:mm AM/PM
+    \n : new line
+    \j : jobs
+  ```
+  - Color code: in format `\[\033[` `format_part` `color_part` `m\]`
+    - Format_part: optional
+  ```
+  Normal : 00; or leave blank
+  Bold : 01;
+  Darker : 02;
+  Italic : 03;
+  Underline : 04;
+  Blink : 05;
+  Invisible : 08
+  ```
+    - Color_part: compulsory
+  
+<!-- </details> -->
