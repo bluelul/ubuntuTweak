@@ -121,8 +121,8 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;44m\] \u@\h \[\033[00m\]:\[\033
 Then open new terminal to apply changes
 
 ### 3. [Optional] Customize theme
-<!-- <details>
-  <summary>Expand</summary> -->
+<details>
+  <summary>Expand</summary>
   - Parts of a theme:  
     PS1='`${debian_chroot:+($debian_chroot)}` `\[\033[01;44m\]` ` \u@\h ` `\[\033[00m\]` `:` `\[\033[01;34m\]` `\w` `\[\033[00m\]` `\$ `'  
   - One color code affects the next text code
@@ -137,17 +137,36 @@ Then open new terminal to apply changes
     \n : new line
     \j : jobs
   ```
-  - Color code: in format `\[\033[` `format_part` `color_part` `m\]`
-    - Format_part: optional
-  ```
-  Normal : 00; or leave blank
-  Bold : 01;
-  Darker : 02;
-  Italic : 03;
-  Underline : 04;
-  Blink : 05;
-  Invisible : 08
-  ```
+  - Color code: in format `\[\033[` `decoration_part` `type_part` `color_part` `m\]`
+    - Decoration_part: optional, remember the `;` tail
+    ```
+    Normal : 00; or 06; or leave blank
+    Bold : 01;
+    Darker : 02;
+    Italic : 03;
+    Underline : 04;
+    Blink : 05;
+    Colored bachground with invisible text : 06;
+    Invisible : 08;
+    Strikethrough : 09;
+    ```
+    - Type_part: compulsory
+    ```
+    Reset : 0
+    Color in text : 3
+    Color in background with white text : 4
+    High intensity (brighter) color in text : 9
+    High intensity (brighter) color in background with white text : 10
+    ```
     - Color_part: compulsory
-  
-<!-- </details> -->
+    ```
+    Black : 0
+    Red : 1
+    Green : 2
+    Yellow : 3
+    Blue : 4
+    Purple : 5
+    Cyan : 6
+    White : 7
+    ```
+</details>
