@@ -96,31 +96,22 @@ Net $(speed(net.down)) | $(speed(net.up))   CPU $(percent(cpu.inuse))   Mem $(si
 
 
 ## Colorize headline of Root User Bash Prompt Terminal
-### 1. Open user related `.bashrc` file
-- Root user:
+### 1. Run one of these theme template setting command in terminal
+- Ubuntu default theme (for normal user) 
 ```bash
-sudo gedit /root/.bashrc
+echo "PS1='\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\\$ '" >> ~/.bashrc
 ```
-- Normal user:
+- Root theme (for root user)
 ```bash
-gedit ~/.bashrc
+sudo echo "PS1='\${debian_chroot:+(\$debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\\$ '" >> /root/.bashrc
 ```
-### 2. Add one of these theme template at the end of ~/.bashrc file
-- Ubuntu default theme  
+- Docker theme (normally as root user)
 ```bash
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-```
-- Root theme
-```bash
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-```
-- Docker theme
-```bash
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;44m\] \u@\h \[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;44m\] \u@\h \[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /root/.bashrc
 ```
 Then open new terminal to apply changes
 
-### 3. [Optional] Customize theme
+### 2. [Optional] Customize theme
 - Parts of a theme:  
   PS1='`${debian_chroot:+($debian_chroot)}` `\[\033[01;44m\]` ` \u@\h ` `\[\033[00m\]` `:` `\[\033[01;34m\]` `\w` `\[\033[00m\]` `\$ `'  
 - One color code affects the next text code
