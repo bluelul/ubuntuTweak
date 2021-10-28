@@ -24,11 +24,18 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 
 <br>
 
+## Hot apply bashrc setting without opening new terminal <span id="hotbashrc"><span>
+```bash
+. ~/.bashrc
+```
+
+<br>
+
 ## Disable Tab auto-completion case-sensitive in Bash
 ```bash
 echo set completion-ignore-case on | sudo tee -a /etc/inputrc
 ```
-Close all terminals and reopen
+Close all terminals and reopen, or just [Hot apply bashrc](#hotbashrc)
 
 <br>
 
@@ -36,7 +43,7 @@ Close all terminals and reopen
 ```bash
 echo alias lah=\'ls -lah\' >> ~/.bashrc
 ```
-Open new terminal and type `lah`
+Open new terminal and type `lah`, or just [Hot apply bashrc](#hotbashrc)
 
 <br>
 
@@ -61,7 +68,7 @@ Run one of these theme template setting command in terminal
   ```bash
   echo "PS1='\${debian_chroot:+(\$debian_chroot)}\[\033[01;44m\] \u@\h \[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\\$ '" >> /root/.bashrc
   ```
-Then open new terminal to apply changes
+Then open new terminal to apply changes, or just [Hot apply bashrc](#hotbashrc)
 
 <details>
   <summary> Customize theme </summary>
