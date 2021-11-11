@@ -47,6 +47,13 @@ Open new terminal and type `lah`, or just [Hot apply bashrc](#hotbashrc)
 
 <br>
 
+## Scan opened SSH ports in network
+```bash
+sudo nmap -sS -p 22 192.168.10.0/24
+```
+
+<br>
+
 ## Colorize headline of Root User Bash Prompt Terminal  
 Run one of these theme template setting command in terminal  
 - Ubuntu default theme (for normal user) 
