@@ -51,7 +51,7 @@ Open new terminal and type `lah`, or just [Hot apply bashrc](#hotbashrc)
 ```bash
 sudo nmap -sS -p 22 192.168.10.0/24
 ```
-
+Remember to change `192.168.10.0/24` into local address space on your network, e.g. 192.168.1.0/24
 <br>
 
 ## Colorize headline of Root User Bash Prompt Terminal  
