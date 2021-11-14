@@ -8,13 +8,20 @@ https://github.com/vincenthsu/systemd-ngrok
 
 # Editor
 `bluelul.com`
+- Automatic install missing packages with `apt install`
+- Add `region ap` to `ngrok.yml`
+- Use `svn` instead of `git` to download this folder
 
 # Automatic installation
 Execute `install.sh` on Linux x64 platform by running these codes below on terminal
-```
+```bash
 curl -O https://raw.githubusercontent.com/bluelul/ubuntuTweak/main/ngrok/install.sh
 chmod +x install.sh
 sudo ./install.sh <your_authtoken>
+```
+After installation, run command below to verify whether ngrok service is up
+```bash
+systemctl status ngrok
 ```
 
 # Manual installation (what install.sh really does)
