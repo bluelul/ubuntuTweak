@@ -47,13 +47,6 @@ Open new terminal and type `lah`, or just [Hot apply bashrc](#hotbashrc)
 
 <br>
 
-## Scan opened SSH ports in network
-```bash
-sudo nmap -sS -p 22 192.168.10.0/24
-```
-Remember to change `192.168.10.0/24` into local address space on your network, e.g. 192.168.1.0/24
-<br>
-
 ## Colorize headline of Root User Bash Prompt Terminal  
 Run one of these theme template setting command in terminal  
 - Ubuntu default theme (for normal user) 
@@ -136,7 +129,7 @@ sudo apt install terminator
 ```
 
 <br>
-
+  
 ## Install Nvidia Driver
 ```bash
 sudo ubuntu-drivers autoinstall
@@ -169,6 +162,39 @@ sleep 11
 
 <br>
 
+## Enable SSH connection
+```bash
+sudo apt install openssh-server
+sudo ufw allow ssh
+```
+Check ssh service is up
+```bash
+systemctl status ssh
+```
+  
+<br>
+  
+## Scan opened SSH ports in network
+```bash
+sudo nmap -sS -p 22 192.168.10.0/24
+```
+Remember to change `192.168.10.0/24` into local address space on your network, e.g. 192.168.1.0/24
+
+<br>
+
+## Install ngrok with run as startup
+```bash
+curl -O https://raw.githubusercontent.com/bluelul/ubuntuTweak/main/ngrok/install.sh
+chmod +x install.sh
+sudo ./install.sh <your_authtoken>
+```
+Check ngrok service is up
+```bash
+systemctl status ngrok
+```
+
+<br>  
+  
 ## System Monitor live on Top Bar
 <p align="center"><img src="/asset/SysMonBar.jpg"/></p>
   
