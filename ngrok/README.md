@@ -17,7 +17,7 @@ chmod +x install.sh
 sudo ./install.sh <your_authtoken>
 ```
 
-# Manual installation
+# Manual installation (what install.sh really does)
 
 Step 1: Place [`ngrok`](https://ngrok.com/download) in `/opt/ngrok/`.
 
@@ -30,6 +30,6 @@ Step 4: Add `ngrok.service` to `/lib/systemd/system/`.
 Step 5: Start ngrok service by typing:
 
 ```
-    systemctl enable ngrok.service
-    systemctl start ngrok.service
+systemctl enable ngrok.service
+systemctl start ngrok.service
 ```
