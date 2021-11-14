@@ -1,3 +1,8 @@
+# What it does
+- Install ngrok service on Linux
+- Start ngrok with configuration in ngrok.yml file
+- Config to autorun ngrok on startup 
+
 # Original repo
 https://github.com/vincenthsu/systemd-ngrok
 
