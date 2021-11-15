@@ -139,20 +139,15 @@ Check driver has installed successfully by command `nvidia-smi`
 <br>
 
 ## Notify after long command finished in terminal
-- install undistract-me
+- install undistract-me and config in bashrc
 ```bash
 sudo apt-get install undistract-me
-```
-- open ~/.bashrc file by gedit with sudo
-```bash
-sudo gedit ~/.bashrc
-```
-- add these lines to ~/.bashrc file
-```bash
+sudo tee -a ~/.bashrc > /dev/null <<EOT
 if ! [ -z "$BASH_VERSION" -o -z "$PS1" -o -n "$last_command_started_cache" ]; then
   . /usr/share/undistract-me/long-running.bash
   notify_when_long_running_commands_finish_install
 fi
+EOT
 ```
 - close all terminals
 - open a terminal and test by running this command then switching to another window
