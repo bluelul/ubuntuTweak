@@ -194,6 +194,13 @@ systemctl status ngrok
 ```
 
 <br>  
+
+## Show all saved wifi passwords  
+```bash
+(cd /etc/NetworkManager/system-connections && sudo grep "psk=" *)
+```
+  
+<br>  
   
 ## System Monitor live on Top Bar
 <p align="center"><img src="/asset/SysMonBar.jpg"/></p>
