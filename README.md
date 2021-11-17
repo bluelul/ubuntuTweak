@@ -122,13 +122,6 @@ Then open new terminal to apply changes, or just [Hot apply bashrc](#hotbashrc)
 </details>
 
 <br>
-
-## Multiscreen terminal
-```bash
-sudo apt install terminator
-```
-
-<br>
   
 ## Install Nvidia Driver
 ```bash
@@ -155,6 +148,40 @@ EOT
 ```bash
 sleep 11
 ```
+
+<br>
+
+## Multiscreen terminal
+```bash
+sudo apt install terminator
+```
+
+<br>
+
+## Save session terminal
+- Install tmux
+```bash
+sudo apt install tmux
+```
+- Config tmux
+```bash
+sudo tee -a ~/.tmux.conf > /dev/null <<EOT
+# Make mouse useful in copy mode
+setw -g mode-mouse on
+
+# Allow mouse to select which pane to use
+set -g mouse-select-pane on
+
+# Scroll History
+set -g history-limit 30000
+
+# Set ability to capture on start and restore on exit window data when running an application
+setw -g alternate-screen on
+
+# Lower escape timing from 500ms to 50ms for quicker response to scroll-buffer access.
+set -s escape-time 50
+
+```  
 
 <br>
 
