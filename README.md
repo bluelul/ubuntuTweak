@@ -68,6 +68,13 @@ Run one of these theme template setting command in terminal
   ```bash
   echo "PS1='\${debian_chroot:+(\$debian_chroot)}\[\033[01;44m\] \u@\h \[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\\$ '" >> /root/.bashrc
   ```
+- Conda theme
+  <!--   <p align="left"><img src="/asset/dockerTheme.jpg"/></p> -->
+
+  ```bash
+  conda config --set env_prompt "\\[\\033[01;42m\\] {default_env} \\[\\033[0m\\]"
+  conda config --set auto_activate_base false
+  ```
 Then open new terminal to apply changes, or just [Hot apply bashrc](#hotbashrc)
 
 <details>
