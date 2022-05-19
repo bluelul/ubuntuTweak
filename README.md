@@ -158,6 +158,13 @@ sudo apt install terminator
 
 <br>
 
+## Disk Usage Analyzer CLI
+```bash
+sudo apt install ncdu
+```
+
+<br>
+
 ## Save session terminal
 - Install tmux
 ```bash
