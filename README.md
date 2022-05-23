@@ -129,7 +129,7 @@ Then open new terminal to apply changes, or just [Hot apply bashrc](#hotbashrc)
 </details>
 
 <br>
-  
+
 ## Install Nvidia Driver
 ```bash
 sudo ubuntu-drivers autoinstall
@@ -159,9 +159,27 @@ sleep 11
 <br>
 
 ## Multiscreen terminal
+### Install
 ```bash
 sudo apt install terminator
 ```
+### Deepblue color profile for terminator
+- Run this command first:
+```bash
+cat >> ~/.config/terminator/config
+```
+- Paste all this text (with exactly spaces) to the waiting new line in terminator
+```
+  [[Deepblue]]
+    background_color = "#002b36"
+    background_darkness = 0.96
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    foreground_color = "#a1b4b7"
+    palette = "#2e3436:#cc0000:#99c026:#c4a000:#347da4:#75507b:#06889a:#d3d7cf:#555753:#ef2929:#bfe15c:#fce94f:#72abcf:#ad7fa8:#34b5e2:#eeeeec"
+    scrollback_infinite = True
+```
+- Press Ctrl-C to finish, then Right-click on terminator -> Profiles -> Deepblue
 
 <br>
 
