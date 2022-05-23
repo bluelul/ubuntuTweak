@@ -175,8 +175,8 @@ cat >> ~/.config/terminator/config
     background_darkness = 0.96
     background_type = transparent
     cursor_color = "#aaaaaa"
-    foreground_color = "#a1b4b7"
-    palette = "#2e3436:#cc0000:#99c026:#c4a000:#347da4:#75507b:#06889a:#d3d7cf:#555753:#ef2929:#bfe15c:#fce94f:#72abcf:#ad7fa8:#34b5e2:#eeeeec"
+    foreground_color = "#b2c7cb"
+    palette = "#2e3436:#cc0000:#719704:#c4a000:#347da4:#75507b:#06889a:#d3d7cf:#555753:#ef2929:#a6ca3c:#fce94f:#72abcf:#ad7fa8:#34b5e2:#eeeeec"
     scrollback_infinite = True
 ```
 - Press Ctrl-C to finish, then Right-click on terminator -> Profiles -> Deepblue
