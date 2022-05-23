@@ -178,8 +178,10 @@ cat >> ~/.config/terminator/config
     foreground_color = "#b2c7cb"
     palette = "#2e3436:#cc0000:#719704:#c4a000:#347da4:#75507b:#06889a:#d3d7cf:#555753:#ef2929:#a6ca3c:#fce94f:#72abcf:#ad7fa8:#34b5e2:#eeeeec"
     scrollback_infinite = True
+  
 ```
-- Press Ctrl-C to finish, then Right-click on terminator -> Profiles -> Deepblue
+- Press Ctrl-C to finish
+- Right-click on terminator -> Preferences -> Layouts -> set the Profile of `default`'s terminal `child1` to `Deepblue`
 
 <br>
 
