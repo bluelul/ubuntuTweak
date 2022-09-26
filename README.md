@@ -185,6 +185,25 @@ cat >> ~/.config/terminator/config
 
 <br>
 
+## Open with right click menu on Nautilus
+### Install
+- Ubuntu 19.04 and newer
+```bash
+sudo apt install filemanager-actions nautilus-actions
+```
+### Config
+- Run fma-config-tool
+```bash
+fma-config-tool &
+```
+
+## Uninstall
+```bash
+sudo apt purge filemanager-actions*
+```
+
+<br>
+
 ## Disk Usage Analyzer CLI
 ```bash
 sudo apt install ncdu
