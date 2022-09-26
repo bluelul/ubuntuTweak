@@ -185,19 +185,45 @@ cat >> ~/.config/terminator/config
 
 <br>
 
-## Open with right click menu on Nautilus
+## "Open with ..." right click menu on Nautilus
+<p align="center"><img src="/asset/openwithmenupreview.png"/></p>
+  
 ### Install
 - Ubuntu 19.04 and newer
-```bash
-sudo apt install filemanager-actions nautilus-actions
-```
+  ```bash
+  sudo apt install filemanager-actions nautilus-actions
+  ```
 ### Config
 - Run fma-config-tool
-```bash
-fma-config-tool &
-```
-
-## Uninstall
+  ```bash
+  fma-config-tool &
+  ```
+- Make actions to appear in the top level of the context menu: 
+  - Go to `FileManager-Actions Configuration Tool` > `Preferences` > `Runtime Preferences` 
+  - Uncheck the `Create a root FileManager-Actions` menu
+  - Optional: select `Items ordering` as `Manual order`
+  - Press `OK`
+- Add menu items:
+  - Method 1: 
+    - Download all files in [this folder](https://github.com/bluelul/ubuntuTweak/blob/main/openwithmenu)
+    - In `fma-config-tool`, go to `Tools` > `Import assistant`, follow GUI instructions to import downloaded config files
+  - Method 2:
+    - Manually create new menu item as below: 
+  
+    | Action > Context label &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Action > Display item in selection.../location... | Command > Path | Command > Parameters &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+    | ---------------------- | ------------------------------------------------- | -------------- | -------------------- |
+    | Open with _Terminator | no / yes | /usr/bin/terminator | --working-directory=%d/%b |
+    | Open with _Sublime Text | yes / yes | /usr/bin/subl | %d/%b |
+    | Open with Sublime _Merge | no / yes | /snap/bin/smerge | %d/%b |
+    | Open with VS _Code | yes / yes | /snap/bin/code | %d/%b |
+### Apply
+- Restart nautilus:
+  ```bash
+  nautilus -q
+  nautilus &
+  ```
+- Done!
+### Uninstall
 ```bash
 sudo apt purge filemanager-actions*
 ```
