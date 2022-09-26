@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/type</key>
+      <applyto>/apps/nautilus-actions/configurations/09f9bf4f-49d6-409f-8330-4697dc182e89/type</applyto>
+      <type>string</type>
+      <default>Action</default>
+      <locale name="C">
+        <short>Type of the item</short>
+        <long>Defines if the item is an action or a menu. Possible values are :
+- 'Action',
+- 'Menu'.
+The value is case sensitive and must not be localized.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/iversion</key>
+      <applyto>/apps/nautilus-actions/configurations/09f9bf4f-49d6-409f-8330-4697dc182e89/iversion</applyto>
+      <type>int</type>
+      <default>3</default>
+      <locale name="C">
+        <short>Version of the format</short>
+        <long>The version of the configuration format that will be used to manage backward compatibility.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/items</key>
+      <applyto>/apps/nautilus-actions/configurations/09f9bf4f-49d6-409f-8330-4697dc182e89/items</applyto>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[profile-zero]</default>
+      <locale name="C">
+        <short>List of subitem ids</short>
+        <long>Ordered list of the IDs of the subitems. This may be actions or menus if the item is a menu, or profiles if the item is an action.
+If this list doesn't exist or is empty for an action or a menu, subitems are attached in the order of the read operations.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/label</key>
+      <applyto>/apps/nautilus-actions/configurations/09f9bf4f-49d6-409f-8330-4697dc182e89/label</applyto>
+      <type>string</type>
+      <locale name="C">
+        <default>Open with _Terminator</default>
+        <short>Label of the context menu item (mandatory)</short>
+        <long>The label of the menu item that will appear in the file manager context menu when the selection matches the appearance condition settings.
+It is also used as a default for the toolbar label of an action.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/target-selection</key>
+      <applyto>/apps/nautilus-actions/configurations/09f9bf4f-49d6-409f-8330-4697dc182e89/target-selection</applyto>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short>Targets the selection context menu</short>
+        <long>Whether the action targets the selection file manager context menus.
+This used to be the historical behavior.
+Note that menus are always potential candidate to the display in selection context menus provided that they contain at least one action.
+Defaults to TRUE.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/target-location</key>
+      <applyto>/apps/nautilus-actions/configurations/09f9bf4f-49d6-409f-8330-4697dc182e89/target-location</applyto>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Targets the location context menu</short>
+        <long>Whether the action targets the file manager context menus when there is no selection, thus applying to current location.
+Note that menus are always potential candidate to the display in selection context menus provided that they contain at least one action.
+Defaults to FALSE</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/target-toolbar</key>
+      <applyto>/apps/nautilus-actions/configurations/09f9bf4f-49d6-409f-8330-4697dc182e89/target-toolbar</applyto>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Targets the toolbar</short>
+        <long>Whether the action is candidate to be displayed in file manager toolbar.
+This only applies to current location.
+Note that menus are never displayed in the toolbar.
+Defaults to FALSE.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/toolbar-label</key>
+      <applyto>/apps/nautilus-actions/configurations/09f9bf4f-49d6-409f-8330-4697dc182e89/toolbar-label</applyto>
+      <type>string</type>
+      <locale name="C">
+        <default>Open with _Terminator</default>
+        <short>Label of the toolbar item</short>
+        <long>The label displayed besides of the icon in the file manager toolbar.
+Note that actual display may depend of your own Desktop Environment preferences.
+Defaults to label of the context menu when not set or empty.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/desc-name</key>
+      <applyto>/apps/nautilus-actions/configurations/09f9bf4f-49d6-409f-8330-4697dc182e89/profile-zero/desc-name</applyto>
+      <type>string</type>
+      <locale name="C">
+        <default>Default profile</default>
+        <short>Name of the profile</short>
+        <long>May be used as a description for the function of the profile.
+If not set, it defaults to an auto-generated name.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/path</key>
+      <applyto>/apps/nautilus-actions/configurations/09f9bf4f-49d6-409f-8330-4697dc182e89/profile-zero/path</applyto>
+      <type>string</type>
+      <default>/usr/bin/terminator</default>
+      <locale name="C">
+        <short>Path of the command</short>
+        <long>The path of the command to be executed when the user select the menu item in the file manager context menu or in the toolbar.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+    <schema>
+      <key>/schemas/apps/nautilus-actions/configurations/parameters</key>
+      <applyto>/apps/nautilus-actions/configurations/09f9bf4f-49d6-409f-8330-4697dc182e89/profile-zero/parameters</applyto>
+      <type>string</type>
+      <default>--working-directory=%d/%b</default>
+      <locale name="C">
+        <short>Parameters of the command</short>
+        <long>The parameters of the command to be executed when the user selects the menu item in the file manager context menu or in the toolbar.
+The parameters may contain some special tokens which are replaced by the information provided by the file manager before starting the command:
+- up to version 2.0:
+  %d: base folder of the selected file(s)
+  %f: the name of the selected file or the first one if several are selected
+  %h: hostname of the URI
+  %m: space-separated list of the basenames of the selected file(s)/folder(s)
+  %M: space-separated list of the selected file(s)/folder(s), with their full paths
+  %p: port number of the first URI
+  %R: space-separated list of selected URIs
+  %s: scheme of the URI
+  %u: URI
+  %U: username of the URI
+  %%: a percent sign.
+- starting from version 3:
+  %b: (first) basename
+  %B: space-separated list of the basenames of the selected file(s)/folder(s)
+  %c: count the selected file(s)/folder(s)
+  %d: (first) base directory
+  %D: space-separated list of base directories of the selected file(s)/folder(s)
+  %f: (first) filename
+  %F: space-separated list of the filenames of the selected file(s)/folder(s)
+  %h: hostname of the (first) URI
+  %m: (first) mimetype
+  %M: space-separated list of the mimetypes of the selected file(s)/folder(s)
+  %n: username of the (first) URI
+  %o: no-op operator which forces the singular form of execution (since 3.0.2)
+  %O: no-op operator which forces the plural form of execution (since 3.0.2)
+  %p: port number of the (first) URI
+  %s: scheme of the (first) URI
+  %u: (first) URI
+  %U: space-separated list of the URIs of the selected file(s)/folder(s)
+  %w: (first) basename without the extension
+  %W: space-separated list of basenames without the extension
+  %x: (first) extension
+  %X: space-separated list of the extensions of the selected file(s)/folder(s)
+  %%: a percent sign.</long>
+      </locale>
+      <owner>filemanager-actions</owner>
+    </schema>
+  </schemalist>
+</gconfschemafile>
