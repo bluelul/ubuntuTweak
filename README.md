@@ -186,7 +186,7 @@ cat >> ~/.config/terminator/config
 <br>
 
 ## "Open with ..." right click menu on Nautilus
-<p align="center"><img src="/asset/openwithmenupreview.png"/></p>
+<p align="center"><img src="/asset/openwithmenupreview.jpg"/></p>
   
 ### Install
 - Ubuntu 19.04 and newer
