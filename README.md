@@ -276,6 +276,26 @@ systemctl status ssh
   
 <br>
   
+## Show port status 
+```bash
+sudo netstat -plunt
+```
+  
+<br>
+  
+## Copy file
+Check ssh connection first
+```bash
+ssh user-name@user-ip
+# example: ssh user@192.168.1.2
+```  
+With scp
+```bash
+scp -pr /path/to/source/folder user-name@user-ip:/path/to/dest/folder
+```
+  
+<br>
+  
 ## Scan opened SSH ports in network
 ```bash
 sudo nmap -sS -p 22 192.168.10.0/24
