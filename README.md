@@ -283,15 +283,28 @@ sudo netstat -plunt
   
 <br>
   
-## Copy file
-Check ssh connection first
+## Copy files
+### Check ssh connection first
 ```bash
-ssh user-name@user-ip
+ssh username@userip
 # example: ssh user@192.168.1.2
 ```  
-With scp
+### With scp
+- `usernamex`, `useripx`, `usernamey`, `useripy` can be omitted in local machine
+- If `dest exists`, result will be: `dest/source-file`
+- If `dest does not exist`, result will be: `dest` (as a file)
 ```bash
-scp -pr /path/to/source/folder user-name@user-ip:/path/to/dest/folder
+scp usernamex@useripx:/path/to/source-file usernamey@useripy:/path/to/dest
+```
+- Use `-r` argument to copy folder
+- If `dest-folder exists`, result will be: `dest-folder/source-folder/...`
+- If `dest-folder does not exist`, result will be: `dest-folder/...`
+```bash
+scp -r usernamex@useripx:/path/to/source-folder usernamey@useripy:/path/to/dest-folder
+```
+- If `dest-folder exists`, result will be: `dest-folder/...`
+```bash
+scp usernamex@useripx:/path/to/source-folder/* usernamey@useripy:/path/to/dest-folder
 ```
   
 <br>
