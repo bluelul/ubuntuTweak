@@ -158,6 +158,16 @@ sleep 11
 
 <br>
 
+## Renaming files in a folder to sequential numbers
+- Sorted in order of modification, later files with later indexes
+- Ignores directories - and not recursive
+- Pads indexes
+- Maintains original extension.
+```bash
+ls -1prt | grep -v "/$" | cat -n | while read n f; do mv -n "${f}" "$(printf "%04d" $n).${f#*.}"; done
+```
+<br>
+
 ## Multiscreen terminal
 ### Install
 ```bash
@@ -237,6 +247,7 @@ sudo apt install ncdu
 
 <br>
 
+  
 ## Save session terminal
 - Install tmux
 ```bash
