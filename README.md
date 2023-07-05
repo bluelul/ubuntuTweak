@@ -246,6 +246,7 @@ sudo apt purge filemanager-actions*
   - `Go to parent folder` button
   - Folder/file property status bar
   - Create new file in right-click menu
+  - Copy full path of file in right-click menu
   - Search file or content of file with regex support
   - Split screen mode
   - Load all thumbnail of files in folder
