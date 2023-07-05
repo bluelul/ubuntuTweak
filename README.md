@@ -240,6 +240,28 @@ sudo apt purge filemanager-actions*
 
 <br>
 
+## Lighter and stronger File Manager
+- Advantages of `pcmanfm` over `nautilus`:
+  - Full path in address bar
+  - `Go to parent folder` button
+  - Folder/file property status bar
+  - Create new file in right-click menu
+  - Search file or content of file with regex support
+  - Split screen mode
+  - Load all thumbnail of files in folder
+  - Load file faster
+- Install `pcmanfm`
+  ```bash
+  sudo apt install pcmanfm
+  ```
+- Config `pcmanfm` as default file manager, instead of `nautilus`
+  ```bash
+  sudo sed -i 's/org.gnome.Nautilus/pcmanfm/g' /usr/share/applications/defaults.list
+  ```
+- Restart computer to apply changes
+
+<br>
+
 ## Disk Usage Analyzer CLI
 ```bash
 sudo apt install ncdu
