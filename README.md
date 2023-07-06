@@ -346,7 +346,7 @@ scp usernamex@useripx:/path/to/source-folder/* usernamey@useripy:/path/to/dest-f
 - `/path/to/source-folder/` must have trailing `/`
 - To check steps before running, add argument `-n`
 ```bash
-rsync -harv usernamex@useripx:/path/to/source-folder/ usernamey@useripy:/path/to/dest-folder
+rsync -Pharv usernamex@useripx:/path/to/source-folder/ usernamey@useripy:/path/to/dest-folder
 ```
 
 <br>
