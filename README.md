@@ -259,6 +259,10 @@ sudo apt purge filemanager-actions*
   ```bash
   sudo sed -i 's/org.gnome.Nautilus/pcmanfm/g' /usr/share/applications/defaults.list
   ```
+  - Reverse (back to nautilus)
+    ```bash
+    sudo sed -i 's/pcmanfm/org.gnome.Nautilus/g' /usr/share/applications/defaults.list
+    ```
 - Restart computer to apply changes
 
 <br>
