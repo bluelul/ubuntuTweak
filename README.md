@@ -274,6 +274,24 @@ sudo apt install ncdu
 
 <br>
 
+## Disk Speed Benchmark GUI
+CrystalDiskMark alternative for Ubuntu
+- Install
+  ```bash
+  sudo add-apt-repository ppa:jonmagon/kdiskmark
+  ```
+  ```bash
+  sudo apt update
+  ```
+  ```bash
+  sudo apt install kdiskmark
+  ```
+- Run
+  ```bash
+  sudo kdiskmark
+  ```
+
+<br>
   
 ## Save session terminal
 - Install tmux
