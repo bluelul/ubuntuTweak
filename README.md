@@ -168,6 +168,18 @@ ls -1prt | grep -v "/$" | cat -n | while read n f; do mv -n "${f}" "$(printf "%0
 ```
 <br>
 
+## Convert png, webp images to jpg
+- `png` to `jpg`
+```bash
+for i in *.png; do name=`echo "$i" | cut -d'.' -f1`; echo "$name"; convert "$i" "${name}.jpg"; done
+```
+- `webp` to `jpg`
+```bash
+for i in *.webp; do name=`echo "$i" | cut -d'.' -f1`; echo "$name"; convert "$i" "${name}.jpg"; done
+```
+
+<br>
+
 ## Multiscreen terminal
 ### Install
 ```bash
