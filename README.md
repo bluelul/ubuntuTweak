@@ -393,6 +393,26 @@ Remember to change `192.168.10.0/24` into local address space on your network, e
 
 <br>
 
+## Scan ports of IP/Site
+- Scan common ports
+```bash
+sudo nmap -n 123.456.789.111
+sudo nmap -n google.com
+```
+- Scan all ports
+```bash
+sudo nmap -np- 123.456.789.111
+```
+
+<br>
+
+## Find public IP address of a machine
+```bash
+curl ipinfo.io
+```
+
+<br>
+
 ## Install ngrok with run as startup
 ```bash
 curl -O https://raw.githubusercontent.com/bluelul/ubuntuTweak/main/ngrok/install.sh
