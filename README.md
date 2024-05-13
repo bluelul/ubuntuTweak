@@ -461,3 +461,12 @@ Mem $(size(mem.user))  Net $(speed(net.down)) | $(speed(net.up))
 ```
 Net $(speed(net.down)) | $(speed(net.up))   CPU $(percent(cpu.inuse))   Mem $(size(mem.user))
 ```
+
+<br>  
+  
+## Remove cache
+```bash
+sudo sh -c 'rm -rf /var/lib/snapd/cache/*'
+sudo rm -r ~/.cache/pip
+sudo rm -rf /root/.cache/pip
+```
