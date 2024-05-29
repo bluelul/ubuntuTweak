@@ -379,8 +379,13 @@ scp usernamex@useripx:/path/to/source-folder/* usernamey@useripy:/path/to/dest-f
 ### Sync folder
 - `/path/to/source-folder/` must have trailing `/`
 - To check steps before running, add argument `-n`
+- Show sync progress and name of each file
 ```bash
 rsync -Pharv usernamex@useripx:/path/to/source-folder/ usernamey@useripy:/path/to/dest-folder
+```
+- Show total sync progress only
+```bash
+rsync -har --info=progress2 usernamex@useripx:/path/to/source-folder/ usernamey@useripy:/path/to/dest-folder
 ```
 
 <br>
