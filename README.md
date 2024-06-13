@@ -351,6 +351,23 @@ sudo netstat -plunt
   
 <br>
   
+## Compress and Extract
+### 7z
+- Compress folder
+```bash
+7z a name.zip foldername
+```
+- Extract zip file
+```bash
+7z x name.zip
+```
+- View zip file
+```bash
+7z l name.zip
+```
+
+<br>
+  
 ## Copy files and folder
 ### Check ssh connection first
 ```bash
