@@ -169,6 +169,10 @@ ls -1prt | grep -v "/$" | cat -n | while read n f; do mv -n "${f}" "$(printf "%0
 <br>
 
 ## Convert png, webp images to jpg
+- Install ImageMagick
+```bash
+sudo apt install imagemagick
+```
 - `png` to `jpg`
 ```bash
 for i in *.png; do name=`echo "$i" | cut -d'.' -f1`; echo "$name"; convert "$i" -background white -flatten "${name}.jpg"; done
