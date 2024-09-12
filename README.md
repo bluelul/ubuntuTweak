@@ -214,6 +214,12 @@ cat >> ~/.config/terminator/config
 ## "Open with ..." right click menu on Nautilus
 <p align="center"><img src="/asset/openwithmenupreview.jpg"/></p>
   
+### Quickway
+- VS Code
+```bash
+wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh | bash
+```
+
 ### Install
 - Ubuntu 19.04 and newer
   ```bash
