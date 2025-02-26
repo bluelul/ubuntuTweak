@@ -495,6 +495,7 @@ Net $(speed(net.down)) | $(speed(net.up))   CPU $(percent(cpu.inuse))   Mem $(si
 ## Remove cache
 ```bash
 sudo sh -c 'rm -rf /var/lib/snapd/cache/*'
+docker builder prune
 sudo rm -r ~/.cache/pip
 sudo rm -rf /root/.cache/pip
 ```
